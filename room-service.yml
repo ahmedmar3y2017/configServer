@@ -2,9 +2,6 @@ server:
   port: 0
 
 spring:
-  application:
-    name: room-service
-
   jpa:
     hibernate:
       ddl-auto: none
