@@ -3,6 +3,10 @@ server:
 spring:
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
       routes:
         - id: room-reservation-service
           uri: lb://room-reservation-service
@@ -18,3 +22,7 @@ spring:
             - Path=/config-server/**
           filters:
             - StripPrefix=1
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
