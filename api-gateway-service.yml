@@ -3,11 +3,6 @@ server:
 spring:
   cloud:
     gateway:
-      discovery:
-        locator:
-          enabled: true
-          lower-case-service-id: true
-
       routes:
         - id: room-reservation-service
           uri: lb://room-reservation-service
