@@ -26,3 +26,12 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${random.value}
+refresh : 
+  test : refresh_Test
+  
+#      *** auto refresh config
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,info
