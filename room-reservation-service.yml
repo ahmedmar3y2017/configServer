@@ -39,7 +39,7 @@ eureka:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${random.value}
 refresh : 
-  test : refresh_Test_modified1234
+  test : refresh_Test_modified12345
   
 #      *** auto refresh config
 management:
