@@ -23,7 +23,9 @@ spring:
           predicates:
             - Path=/config-server/**
           filters:
-            - name: StripPrefix=1
+            - name: StripPrefix
+              args:
+                parts: 1
             - name: AuthenticationFilter
 
         - id: identity-service
