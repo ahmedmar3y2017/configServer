@@ -32,6 +32,8 @@ spring:
           uri: lb://identity-service
           predicates:
             - Path=/auth/**
+          filters:
+            - name: AuthenticationFilter
 
 eureka:
   instance:
