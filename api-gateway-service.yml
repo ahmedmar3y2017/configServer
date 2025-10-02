@@ -16,6 +16,8 @@ spring:
             - name: Logging
               args:
                 tag: room-reservation-service
+            - name: AuthenticationFilter
+                
         - id: config-server
           uri: lb://config-server
           predicates:
