@@ -35,3 +35,9 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
+
+app:
+  jwt:
+    # A base64-encoded 256-bit secret (generate one and paste)
+    secret: "bXlfc2VjcmV0X2tleV90aGF0X2lzX2xvbmdlX2Vub3VnaA=="
+    expiration-ms: 3600000
