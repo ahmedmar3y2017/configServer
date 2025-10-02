@@ -44,7 +44,7 @@ eureka:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${random.value}
 refresh : 
-  test : refresh_identityService
+  test : refresh_identityService1
   
 #      *** auto refresh config
 management:
