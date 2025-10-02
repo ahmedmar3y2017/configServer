@@ -23,10 +23,10 @@ spring:
           predicates:
             - Path=/config-server/**
           filters:
+            - name: AuthenticationFilter
             - name: StripPrefix
               args:
                 parts: 1
-            - name: AuthenticationFilter
 
         - id: identity-service
           uri: lb://identity-service
