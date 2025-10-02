@@ -11,6 +11,17 @@ spring:
     password: "{cipher}b7dc75d2e381a4d7c30582260105ea4c2a9d10cab711d92ddffa8a9962ff6e79"
   liquibase:
     change-log: classpath:/db/changelog/db.changelog-master.sql
+  cloud:
+    bus:
+      enabled: true
+    stream:
+      kafka:
+        binder:
+          auto-add-partitions: true
+#    refresh:
+#      additional-property-sources-to-retain:
+  kafka:
+    bootstrap-servers: localhost:19092 , localhost:19093 , localhost:19094
 
 server:
   port: 0
