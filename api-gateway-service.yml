@@ -16,14 +16,12 @@ spring:
             - name: Logging
               args:
                 tag: room-reservation-service
-            - name: AuthenticationFilter
                 
         - id: config-server
           uri: lb://config-server
           predicates:
             - Path=/config-server/**
           filters:
-            - name: AuthenticationFilter
             - name: StripPrefix
               args:
                 parts: 1
@@ -32,8 +30,6 @@ spring:
           uri: lb://identity-service
           predicates:
             - Path=/auth/**
-          filters:
-            - name: AuthenticationFilter
 
 eureka:
   instance:
